@@ -92,6 +92,7 @@ function NativeMap({
         onMapReady={fitMap}
         onLayout={fitMap}
         showsUserLocation={Boolean(position)}
+        showsMyLocationButton={false}
       >
         {polygons.map(({ plot, coordinates }) => {
           const status = computeStatus(plot);
@@ -143,7 +144,6 @@ function NativeMap({
             </Fragment>
           );
         })}
-        {position && <Marker coordinate={position} title="Tu posición" pinColor="#22c55e" />}
       </MapView>
 
       {/* Floating Top-Right Controls */}

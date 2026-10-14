@@ -52,7 +52,7 @@ export default function SignInScreen() {
             {/* Brand Logo / Title */}
             <View style={styles.brandHeader}>
               <View style={styles.brandEmblem}>
-                <Ionicons name="leaf" color="#22c55e" size={32} />
+                <Ionicons name="leaf" color="#22c55e" size={32} style={styles.brandIcon} />
               </View>
               <Text style={styles.brandTitle}>AgroPulse</Text>
               <Text style={styles.brandSubtitle}>Agricultura de Precisión</Text>
@@ -110,8 +110,6 @@ export default function SignInScreen() {
                 )}
               </Pressable>
             </View>
-
-            <Text style={styles.footerNote}>Estancia Didáctica Concordia • Sistema AgroPulse</Text>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -147,7 +145,7 @@ const styles = StyleSheet.create({
     width: 64,
     height: 64,
     borderRadius: 20,
-    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+    backgroundColor: '#11271a',
     borderColor: 'rgba(34, 197, 94, 0.3)',
     borderWidth: 1,
     alignItems: 'center',
@@ -156,8 +154,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
     shadowRadius: 12,
-    elevation: 3,
     marginBottom: 6,
+    overflow: 'hidden',
+  },
+  brandIcon: {
+    backgroundColor: 'transparent',
   },
   brandTitle: {
     color: '#ffffff',
@@ -241,11 +242,5 @@ const styles = StyleSheet.create({
   },
   disabled: {
     opacity: 0.6,
-  },
-  footerNote: {
-    color: '#6b7280',
-    fontSize: 12,
-    textAlign: 'center',
-    marginTop: 8,
   },
 });
